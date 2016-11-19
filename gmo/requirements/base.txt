@@ -41,3 +41,10 @@ redis>=2.10.5
 
 
 # Your custom requirements go here
+
+# Django Rest API
+djangorestframework
+markdown
+django-filter
+
+

@@ -47,6 +47,8 @@ LOCAL_APPS = (
     # custom users app
     'gmo.users.apps.UsersConfig',
     # Your stuff: custom apps go here
+    'rest_framework', # Django Rest Framework
+
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
@@ -103,6 +105,9 @@ DATABASES = {
     'default': env.db('DATABASE_URL', default='postgres://localhost/gmo'),
 }
 DATABASES['default']['ATOMIC_REQUESTS'] = True
+DATABASES['default']['USER'] = env('POSTGRES_USER')
+DATABASES['default']['PASSWORD'] = env('POSTGRES_PASSWORD')
+
 
 
 # GENERAL CONFIGURATION
